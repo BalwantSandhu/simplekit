@@ -43,6 +43,7 @@ import { SKEvent, SKKeyboardEvent, SKMouseEvent } from "./events";
 
 // dispatchers
 import { mouseDispatch, keyboardDispatch } from "./dispatch";
+export { SKHyperlinkButton } from "./widget/hyperlinkButton";
 
 import {
   EventTranslator,
