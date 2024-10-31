@@ -5,6 +5,7 @@ export class SKHyperlinkButton extends SKButton {
 
   constructor(buttonProps: SKButtonProps = {}) {
     super(buttonProps);
+    this.fill = "#D0F0C0";
   }
 
   draw(gc: CanvasRenderingContext2D) {
@@ -25,7 +26,7 @@ export class SKHyperlinkButton extends SKButton {
 
     // Draw button label, styled like a hyperlink
     gc.fillStyle = this.state === "hover" ? this._highlightColour : this._fontColour;
-    gc.font = this._font;
+    gc.font = this.isPressed ? "bold " + this._font : this._font;
     gc.textAlign = "center";
     gc.textBaseline = "middle";
 
